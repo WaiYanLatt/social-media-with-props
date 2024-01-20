@@ -128,7 +128,7 @@ export default {
           <PostCardView :currentUser="currentUser" v-for="post in currentUser.posts.slice().reverse()" :key="post.id" :post="post"></PostCardView>
         </div>
       </div>
-      <div class="lg:w-[550px] lg:h-[370px] w-[370px] h-[350px] z-20 rounded-xl lg:p-10 p-5 bg-white shadow-2xl fixed top-32 lg:right-[30%]" v-show="show === true">
+      <div class="lg:w-[550px] lg:h-[370px] w-[350px] h-[350px] z-20 rounded-xl lg:p-10 p-5 bg-white shadow-2xl fixed top-32 lg:right-[30%]" v-show="show === true">
         <Form @create="create" @unShow="unShow" :errorandsuccess="errorandsuccess"></Form>
       </div>
     </div>
