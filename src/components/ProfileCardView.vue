@@ -28,13 +28,13 @@ export default {
 </script>
 
 <template>
-  <div class="lg:my-10">
+  <div class="lg:my-10 ">
     <!-- card -->
     <div
-      class="w-full shadow-xl rounded-lg overflow-hidden bg-white min-h-96 p-5 lg:p-10 border"
+      class="w-full lg:shadow-xl shadow-xl md:shadow-none md:border-0  rounded-lg overflow-hidden bg-white min-h-96 p-5 lg:p-10 border"
     >
-      <div class="flex flex-col lg:flex-row items-center lg:mt-0 mt-10">
-        <div class="relative lg:ml-20">
+      <div class="flex flex-col lg:flex-row md:flex-row items-center md:items-start lg:mt-0 mt-10">
+        <div class="relative lg:ml-20 md:mt-10 mt-0">
           <img
             :src="user.avatar"
             class="w-32 h-32 object-cover rounded-full border-4 border-blue-500"
@@ -46,7 +46,7 @@ export default {
             <i class="fa-solid fa-check text-white"></i>
           </div>
         </div>
-        <div class="ml-0 lg:ml-32 lg:mt-0 mt-10">
+        <div class="ml-0 lg:ml-32 md:ml-14 lg:mt-0 mt-10">
           <div class="flex items-center">
             <h1 class="text-xl font-semibold mr-5">{{ user.name }}</h1>
             <i class="fa-solid fa-location-dot text-slate-400"></i>
@@ -66,7 +66,7 @@ export default {
           </h1>
           <div class="lg:mt-10 mt-10">
             <button
-              class="font-semibold w-full lg:w-auto text-slate-500 p-3 lg:p-2 bg-slate-300 rounded-lg"
+              class="font-semibold w-full lg:w-auto md:w-auto text-slate-500 p-3 lg:p-2 bg-slate-300 rounded-lg"
               @click="showMessage"
             >
               <i class="fa-solid fa-message text-slate-500"></i>
@@ -74,7 +74,7 @@ export default {
             </button>
             <button
               @click="showFollow"
-              class="font-semibold text-sky-500 mt-5 lg:mt-0 p-3 lg:p-2 ml-0 lg:ml-3 bg-blue-100 rounded-lg w-full lg:w-auto"
+              class="font-semibold text-sky-500 mt-5 md:w-auto lg:mt-0 p-3 lg:p-2 ml-0 lg:ml-3 md:ml-2  bg-blue-100 rounded-lg w-full lg:w-auto"
             >
               <i
                 class="fa-solid fa-user-plus text-sky-500 mr-3"
@@ -88,14 +88,14 @@ export default {
               <span v-show="show === true">Followed</span>
             </button>
             <button
-              class="font-semibold text-red-500 mt-5 lg:mt-0 p-3 w-full lg:w-auto lg:p-2 ml-0 lg:ml-3 bg-red-100 rounded-lg"
+              class="font-semibold md:w-auto text-red-500 mt-5 lg:mt-0 p-3 w-full lg:w-auto lg:p-2 ml-0 lg:ml-3 md:ml-2 bg-red-100 rounded-lg"
             >
               <i class="fa-solid fa-exclamation-triangle text-red-500"></i>
               Report User
             </button>
             <button
               @click="logout"
-              class="font-semibold text-white mt-5 lg:mt-0 p-3 w-full lg:w-auto lg:p-2 ml-0 lg:ml-3 bg-red-500 rounded-lg"
+              class="font-semibold md:w-auto text-white mt-5 lg:mt-0 p-3 w-full lg:w-auto lg:p-2 ml-0 lg:ml-3 md:ml-2 bg-red-500 rounded-lg"
             >
             <i class="fa-solid fa-right-from-bracket"></i>
               Logout
@@ -103,7 +103,7 @@ export default {
           </div>
         </div>
       </div>
-      <div class="flex lg:flex-row flex-col">
+      <div class="flex lg:flex-row flex-col md:flex-row">
         <div class="lg:w-[500px] w-full min-h-96">
           <div class="mt-12">
             <h1 class="font-semibold text-gray-400">INTRO</h1>
@@ -173,14 +173,14 @@ export default {
       </div>
       <router-link :to="`/users`">
         <button
-          class="p-3 lg:p-2 bg-slate-500 mt-5 rounded-lg font-semibold text-white w-full lg:w-auto"
+          class="p-3 lg:p-2 bg-slate-500 mt-5 md:w-[48%]  rounded-lg font-semibold text-white w-full lg:w-auto"
         >
           Back All Users
         </button>
       </router-link>
       <router-link :to="`/users/${user.id}/posts`">
         <button
-          class="p-3 lg:p-2 bg-slate-500 mt-5 rounded-lg font-semibold text-white ml-0 lg:ml-3 w-full lg:w-auto"
+          class="p-3 lg:p-2 bg-slate-500 mt-5 md:w-[48%] rounded-lg font-semibold text-white ml-0 lg:ml-3 md:ml-3  w-full lg:w-auto"
         >
           View Posts
         </button>

@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="mt-10 lg:ml-5 lg:px-56 border lg:border-0">
+  <div class="mt-10 lg:ml-5 lg:px-56 md:px-10 px-0 border lg:border-0 md:border-0">
     <div class="w-full shadow-lg rounded-lg">
       <!-- card-body -->
       <div class="lg:p-7 p-5">

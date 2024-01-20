@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="lg:my-5 lg:ml-3">
+  <div class="lg:my-5 lg:ml-3 md:ml-3 md:my-5">
     <!-- card -->
     <div
       class="w-full shadow-xl rounded-lg overflow-hidden p-5 border mb-5"

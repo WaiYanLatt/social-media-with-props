@@ -15,7 +15,7 @@ export default {
 
 <template>
     <div class="container mx-auto lg:px-28">
-        <div class="grid grid-cols-1 lg:grid-cols-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <UserCardView v-for="user in users" :key="user.id" :user="user"></UserCardView>
         </div>
     </div>
