@@ -1,0 +1,60 @@
+routeguard ဆို တာ က route တွေ ကို ကာ ကွယ် တာ
+ဥပမာ facebook မှာ login မ ဝင် ပဲ နဲ့ user က facebook ထဲ က photo ကို ကြည့် လို့ မရ ဘူး
+သူ login မ ဝင် မ ချင်း facebook က login form ပဲ ပြ နေ မှာ 
+အဲ့ ဒါ ကို route gaurd လို့ ခေါ် တယ် login ကာ လွဲ လို့ ကျန် တဲ့ route တွေ ကို ကာ ထား တာ 
+အခု pj မှာ လည်း login ပဲ ပြ မယ် ကျန် တာ အကုန် ကာ မှာ 
+အဲ့ တော့ ဘယ် လို လုပ် မ လည်း 
+meta ဆို တဲ့ keyworld ရှိ တယ် အဲ့ အ ထဲ မှာ သိမ်း ချင် တာ သိမ်း လို့ ရ တယ် 
+အများ ဆုံး သိမ်း တာ က ဒီ route က login လုပ် ကို လုပ် ရ မှာ လား ဒါ မှ မ ဟုတ် 
+aceess လုပ် လို့ ရ လား အဲ့ ဒါ ကို သိမ်း တာ
+meta {
+    protected : true or false
+}  
+protected ဆို တဲ့ key ကို သုံး ပြီး တော့ 
+false ဆို ရင် မကာဘူး true ဆို ရင် တော့ ကာ မှာ 
+တစ် ခု မှတ် ရ မှာ က route တိုင်း route တိုင်း မှာ
+validitor ဆို တာ ရှိ တယ် 
+အဲ့ ဒါ လူ တိုင်း သိ တယ် 
+google မှာ link ကို ကြည့် တယ် ဝင် တယ် secure မ ဖြစ် ဘူး 
+google က warning တက် တယ် 
+အဲ့ လို့ validitor ကို 
+စစ် ချင် ရင် 
+beforeEnter လို့ ခေါ် တယ် 
+သူ က function သူမှာ့ parameter ရှိ တယ်
+( to , from , next ) ရယ် 
+to က ဘယ် ကို သွား မှာ လည်း 
+from က ဘယ် က လည်း
+next က redirect ဘယ် ကို ပြန် ပို့ မှာ လည်း
+ကျနော် တို့ မှာ login လုပ် ထား လား မလုပ် ထား ဘူး လား ဆို တာ ကို သိ ဖို့ က 
+ကျနော် တို့ မှာ data မရှိ ဘူး data တွေ က app.vue မှာ အဲ့ ဒါ ကို လှမ်း ယူ သုံး လို့ လည်း မရ ဘူး 
+original js ကို သုံး ရ မယ် 
+localStroage ထဲ မှာ isAuthenicated ကို ထည့် ထား တယ် အဲ့ ဒါ ကို ယူ သုံး မှာ  
+beforeEnter : (to , from , next) => {
+      const isAuthenicated =  localStorage.getItem("isAuthenicated") === "true";
+      if(isAuthenicated === false){
+         next('/')
+      } else {
+         next();
+      }
+}
+အဲ့ code ကို route တိုင်း မှာ မယ့် အ စား shorthand ရှိ တယ်
+အဲ့ဒါ က router object ပေါ် မှာ မူ တည် ပြီး တော့ 
+protected false ဖြစ် ပေး ဝင် မယ် true ဖြစ် ရင် ကာ မယ်
+
+router.beforeEach((to , from , next ) => {
+    if(to.meta.protected === false ){
+        next();
+    } else {
+        const isAuthenicated =  localStorage.getItem("isAuthenicated") === "true";
+      if(isAuthenicated === false){
+         next('/')
+      } else {
+         next();
+      }
+    }
+})
+
+နောက် feacture တစ် ခု က login လုပ် တာ နဲ့ user ကို ပို မှာ 
+this.$router.push('/users')
+
+
