@@ -33,7 +33,7 @@ export default {
 
 <template>
   <div class="container-fulid mx-auto flex justify-center items-center h-screen bg-white">
-    <div class="p-5 lg:p-10 rounded-xl flex flex-col lg:flex-row  bg lg:py-20 mx-5 lg:mx-0">
+    <div class="p-3 lg:p-10 rounded-xl flex flex-col lg:flex-row  bg lg:py-20 mx-2 lg:mx-0">
       <div>
         <img src="/img/login.gif" alt="" class="lg:w-96 w-full object-cover"/>
       </div>
