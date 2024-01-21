@@ -175,7 +175,7 @@ export default {
         <button
           class="p-3 lg:p-2 bg-slate-500 mt-5 md:w-[48%]  rounded-lg font-semibold text-white w-full lg:w-auto"
         >
-          Back All Users
+          See Other Users
         </button>
       </router-link>
       <router-link :to="`/users/${user.id}/posts`">

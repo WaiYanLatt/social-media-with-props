@@ -363,8 +363,8 @@ export default {
         this.currentUserID = hasAccount.id;
         this.isAuthenicated = true;
         this.message.success = "LOGIN SUCCESS";
-        // this.$router.push(`/users/${this.currentUserID}`) // to single profile
-        this.$router.push(`/users`) // to all users
+        this.$router.push(`/users/${this.currentUserID}`) // to single profile
+        // this.$router.push(`/users`) // to all users
       } else {
         this.currentUserID = null;
         this.isAuthenicated = false;

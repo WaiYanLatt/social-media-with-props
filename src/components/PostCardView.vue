@@ -10,6 +10,20 @@ export default {
       required: true,
     },
   },
+  mounted() {
+    const posts = JSON.parse(localStorage.getItem("posts"));
+    if (posts) {
+      this.currentUser.posts = posts;
+    }
+  },
+  watch: {
+    "currentUser.posts": {
+      handler() {
+        localStorage.setItem("posts", JSON.stringify(this.currentUser.posts));
+      },
+      deep: true,
+    },
+  },
 };
 </script>
 

@@ -37,13 +37,6 @@ export default {
       return user;
     },
   },
-  // watch : {
-  //   'currentUser.posts' : {
-  //      handler() {
-  //         localStorage.setItem('posts' , this.stringify(this.urrentUser.posts))
-  //      },
-  //   },
-  // },
   methods: {
     showCard() {
       this.show = true;
@@ -90,7 +83,7 @@ export default {
     class="container-fluid mx-auto flex flex-col lg:flex-row justify-between items-center"
   >
     <div
-      class="lg:shadow-xl w-full lg:w-96 md:px-10 px-0 lg:min-h-screen lg:fixed lg:top-0 overflow-hidden lg:mt-0 mt-20"
+      class="lg:shadow-xl w-full lg:w-96  lg:px-0 md:px-10 px-0 lg:min-h-screen lg:fixed lg:top-0 overflow-hidden lg:mt-0 mt-20"
     >
       <div class="relative">
         <img
